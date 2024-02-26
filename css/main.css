@@ -16,6 +16,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     min-height: 100vh;
     background: linear-gradient(to bottom, #434343, #000000);
 
@@ -47,6 +48,19 @@ body {
     align-items: center;
     pointer-events: none;
     transition: 0.2s linear;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .botton-sheet.show {
