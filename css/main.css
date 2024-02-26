@@ -1,0 +1,135 @@
+.nunito {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: azure;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #434343, #000000);
+
+
+}
+
+.Show-modal {
+    outline: none;
+    border: none;
+    background: linear-gradient(to right, #021B79, #0575E6);
+
+    padding: 15px 25px;
+    color: rgba(255, 255, 255, 0.747);
+    border-radius: 6px;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.botton-sheet {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    pointer-events: none;
+    transition: 0.2s linear;
+}
+
+.botton-sheet.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sheet-overly {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: -1;
+    opacity: 0.2;
+
+}
+
+.content {
+    background: linear-gradient(to top, #414345, #232526);
+
+    box-shadow: 0 0 3px #c2c2c2;
+    height: 50vh;
+    max-height: 100vh;
+    padding: 25px 30px;
+    max-width: 1100px;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+    transform: translateY(100%);
+    transition: 0.3s ease-in;
+}
+
+.botton-sheet.draggin .content {
+    transition: none;
+}
+
+.botton-sheet.fullscreen .content {
+    border-radius: 0;
+    overflow-y: hidden;
+}
+
+.botton-sheet.show .content {
+    transform: translateY(0);
+}
+
+.body {
+    overflow: auto;
+    height: 100%;
+    scrollbar-width: none;
+    padding: 15px 0 40px;
+}
+
+.body::-webkit-scrollbar {
+    width: 0;
+}
+
+.body h2 {
+    font-size: 1.8rem;
+}
+
+.body p {
+    font-size: 1.05rem;
+    margin-top: 20px;
+}
+
+.darg-icon {
+    cursor: grab;
+    user-select: none;
+    padding: 15px;
+    margin-top: 15px;
+
+}
+
+.darg-icon span {
+    height: 4px;
+    width: 50px;
+    display: block;
+    background-color: #bcc3c7;
+    border-radius: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
